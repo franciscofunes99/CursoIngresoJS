@@ -4,6 +4,7 @@
 */
 function Mostar()
 {
-	
+	var edad=prompt("ingresar su edad")
+	document.getElementById("elNombre").value = edad;
 }
 
