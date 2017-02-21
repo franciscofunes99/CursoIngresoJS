@@ -14,7 +14,10 @@ var contadorIntentos;
 
 function comenzar()
 {
-	//Genero el número RANDOM entre 1 y 100
+	var numeroSecreto=math.floor(math.random)()*(101-1)+1;
+	if (numero=56){
+		
+
 	 
 	
 

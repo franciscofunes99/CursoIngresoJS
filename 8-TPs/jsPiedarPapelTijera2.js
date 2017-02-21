@@ -34,16 +34,25 @@ function piedra()
 	{
 		alert("empate.");	
 		ContadorDeEmpates++;	
+		rachaEmpate++;
+		rachaGanadas=0;
+		rachaPerdidas=0;
 	}
 	else if(eleccionMaquina=="tijera")
 	{
 		alert("vos ganastes.");
 		ContadorDeGanadas++;
+		rachaEmpate=0;
+		rachaGanadas++;
+		rachaPerdidas=0;
 	}
 	else
 	{
 		alert("ganó la Maquina.");
 		ContadorDePerdidas++;
+		rachaEmpate=0;
+		rachaGanadas=0;
+		rachaPerdidas++;
 	}
 
 mostarResultado();
@@ -57,17 +66,25 @@ function papel()
 	{
 		alert("empate.");
 		ContadorDeEmpates++;		
-
+		rachaEmpate++;
+		rachaGanadas=0;
+		rachaPerdidas=0;
 	}
 	else if(eleccionMaquina=="piedra")
 	{
 		alert("vos ganastes.");
 		ContadorDeGanadas++;
+		rachaEmpate=0;
+		rachaGanadas++;
+		rachaPerdidas=0;
 	}
 	else
 	{
 		alert("ganó la Maquina.");
 		ContadorDePerdidas++;
+		rachaEmpate=0;
+		rachaGanadas=0;
+		rachaPerdidas++;
 	}
 mostarResultado();
 }//FIN DE LA FUNCIÓN
@@ -78,17 +95,27 @@ function tijera()
 	if(eleccionHumano==eleccionMaquina)
 	{
 		alert("empate.");
-		ContadorDeEmpates++;		
+		ContadorDeEmpates++;
+		rachaEmpate++;
+		rachaGanadas=0;
+		rachaPerdidas=0;
 	}
 	else if(eleccionMaquina=="papel")
 	{
 		alert("vos ganastes.");
 		ContadorDeGanadas++;
+		rachaEmpate=0;
+		rachaGanadas++;
+		rachaPerdidas=0;
+	
 	}
 	else
 	{
 		alert("ganó la Maquina.");
 		ContadorDePerdidas++;
+        rachaEmpate=0;
+		rachaGanadas=0;
+		rachaPerdidas++;
 	}
 mostarResultado();
 }//FIN DE LA FUNCIÓN
@@ -99,6 +126,7 @@ function mostarResultado()
 document.getElementById('empatadas').value=ContadorDeEmpates + " partidas empatadas.";
 document.getElementById('perdidas').value=ContadorDePerdidas + " partidas perdidas.";
 document.getElementById('ganadas').value=ContadorDeGanadas + " partidas ganadas.";
+
 
 comenzar();
 }
